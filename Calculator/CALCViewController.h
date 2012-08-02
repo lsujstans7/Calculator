@@ -10,4 +10,11 @@
 
 @interface CALCViewController : UIViewController
 
+- (IBAction)numberButtonPushed:(UIButton *)sender;
+- (IBAction)operatorButtonPushed:(UIButton *)sender;
+- (IBAction)clearButtonPushed:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *mainDisplayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *operationsLabel;
+
 @end
