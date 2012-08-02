@@ -23,15 +23,15 @@
 		5BED0DE315CAE83200316E4A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5BED0DE515CAE83200316E4A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BED0DE715CAE83200316E4A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5BED0DEB15CAE83200316E4A /* Calculator-Info.plist */ = {isa = PBXFileReference; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
+		5BED0DEB15CAE83200316E4A /* Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Calculator-Info.plist"; sourceTree = "<group>"; };
 		5BED0DED15CAE83200316E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BED0DEF15CAE83200316E4A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BED0DF115CAE83200316E4A /* Calculator-Prefix.pch */ = {isa = PBXFileReference; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
-		5BED0DF215CAE83200316E4A /* CALCAppDelegate.h */ = {isa = PBXFileReference; path = CALCAppDelegate.h; sourceTree = "<group>"; };
+		5BED0DF115CAE83200316E4A /* Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		5BED0DF215CAE83200316E4A /* CALCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALCAppDelegate.h; sourceTree = "<group>"; };
 		5BED0DF315CAE83300316E4A /* CALCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALCAppDelegate.m; sourceTree = "<group>"; };
 		5BED0DF615CAE83300316E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		5BED0DF915CAE83300316E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		5BED0DFB15CAE83300316E4A /* CALCViewController.h */ = {isa = PBXFileReference; path = CALCViewController.h; sourceTree = "<group>"; };
+		5BED0DFB15CAE83300316E4A /* CALCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALCViewController.h; sourceTree = "<group>"; };
 		5BED0DFC15CAE83300316E4A /* CALCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALCViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
