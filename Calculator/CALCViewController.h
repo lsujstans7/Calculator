@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CALCModel.h"
 
 @interface CALCViewController : UIViewController
 
@@ -16,5 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *mainDisplayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *operationsLabel;
-
+@property (nonatomic) BOOL typingNumber;
+@property (nonatomic, strong) CALCModel *model;
 @end

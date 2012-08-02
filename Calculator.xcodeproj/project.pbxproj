@@ -16,6 +16,7 @@
 		5BED0DF715CAE83300316E4A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED0DF515CAE83300316E4A /* MainStoryboard_iPhone.storyboard */; };
 		5BED0DFA15CAE83300316E4A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BED0DF815CAE83300316E4A /* MainStoryboard_iPad.storyboard */; };
 		5BED0DFD15CAE83300316E4A /* CALCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED0DFC15CAE83300316E4A /* CALCViewController.m */; };
+		5BED0E0515CB19FB00316E4A /* CALCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BED0E0415CB19FB00316E4A /* CALCModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		5BED0DF915CAE83300316E4A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		5BED0DFB15CAE83300316E4A /* CALCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CALCViewController.h; sourceTree = "<group>"; };
 		5BED0DFC15CAE83300316E4A /* CALCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CALCViewController.m; sourceTree = "<group>"; };
+		5BED0E0315CB19FB00316E4A /* CALCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALCModel.h; sourceTree = "<group>"; };
+		5BED0E0415CB19FB00316E4A /* CALCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CALCModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				5BED0DF815CAE83300316E4A /* MainStoryboard_iPad.storyboard */,
 				5BED0DFB15CAE83300316E4A /* CALCViewController.h */,
 				5BED0DFC15CAE83300316E4A /* CALCViewController.m */,
+				5BED0E0315CB19FB00316E4A /* CALCModel.h */,
+				5BED0E0415CB19FB00316E4A /* CALCModel.m */,
 				5BED0DEA15CAE83200316E4A /* Supporting Files */,
 			);
 			path = Calculator;
@@ -168,6 +173,7 @@
 				5BED0DF015CAE83200316E4A /* main.m in Sources */,
 				5BED0DF415CAE83300316E4A /* CALCAppDelegate.m in Sources */,
 				5BED0DFD15CAE83300316E4A /* CALCViewController.m in Sources */,
+				5BED0E0515CB19FB00316E4A /* CALCModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

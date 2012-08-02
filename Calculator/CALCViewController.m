@@ -15,11 +15,14 @@
 @implementation CALCViewController
 @synthesize mainDisplayLabel;
 @synthesize operationsLabel;
+@synthesize typingNumber = _typingNumber;
+@synthesize model = _model;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.typingNumber = NO;
 }
 
 - (void)viewDidUnload
@@ -48,31 +51,49 @@
     else {
         newDisplay = [self.mainDisplayLabel.text stringByAppendingFormat:@"%@", sender.titleLabel.text];
         mainDisplayLabel.text = newDisplay;
+        self.typingNumber = YES;
     }
 }
 
 - (IBAction)operatorButtonPushed:(UIButton *)sender {
     NSString *operator = sender.titleLabel.text;
-    if ([operator isEqualToString:@"+"]) {
-        NSLog(@"Add!!!");
-        operationsLabel.text = operator;
+    if (self.typingNumber) {
+        
+        double currentNumber = [self.mainDisplayLabel.text doubleValue];
+
+        if ([operator isEqualToString:@"="]) {
+            double result = [self.model performOperationWithOperand:(currentNumber)];
+            NSLog(@"Result %f", result);
+        }
+        else {
+                
+            self.model.waitingOperand = currentNumber;
+            self.model.operation = operator;
+        
+        }
+        mainDisplayLabel.text = @"0";
+        self.typingNumber = NO;
     }
-    else if ([operator isEqualToString:@"-"]) {
-        NSLog(@"Subtract!!!");
-        operationsLabel.text = operator;
-    }
-    else if ([operator isEqualToString:@"*"]) {
-        NSLog(@"Multiply!!!");
-        operationsLabel.text = operator;
-    }
-    else if ([operator isEqualToString:@"/"]) {
-        NSLog(@"Divide!!!");
-        operationsLabel.text = operator;
-    }
-    else if ([operator isEqualToString:@"="]) {
-        NSLog(@"Equals!!!");
-        operationsLabel.text = operator;
-    }
+//    if ([operator isEqualToString:@"+"]) {
+//        NSLog(@"Add!!!");
+//        operationsLabel.text = operator;
+//    }
+//    else if ([operator isEqualToString:@"-"]) {
+//        NSLog(@"Subtract!!!");
+//        operationsLabel.text = operator;
+//    }
+//    else if ([operator isEqualToString:@"*"]) {
+//        NSLog(@"Multiply!!!");
+//        operationsLabel.text = operator;
+//    }
+//    else if ([operator isEqualToString:@"/"]) {
+//        NSLog(@"Divide!!!");
+//        operationsLabel.text = operator;
+//    }
+//    else if ([operator isEqualToString:@"="]) {
+//        NSLog(@"Equals!!!");
+//        operationsLabel.text = operator;
+//    }
 }
 
 - (IBAction)clearButtonPushed:(UIButton *)sender {
