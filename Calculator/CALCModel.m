@@ -14,24 +14,28 @@
 
 - (double)performOperationWithOperand:(double)newOperand
 {
-    double result = 0.0;
+    double result;
     
-    NSLog(@"Operation:%@ waitingOperand:%f", self.operation, self.waitingOperand);
-    
+    NSLog(@"look");
+        
     if ([self.operation isEqualToString:@"+"]) {
         NSLog(@"Waiting operand is %f and new operand is %f", self.waitingOperand, newOperand);
         result = (self.waitingOperand + newOperand);
     }
     else if ([self.operation isEqualToString:@"-"]) {
+        result = (self.waitingOperand - newOperand);
         NSLog(@"Subtract!!!");
     }
     else if ([self.operation isEqualToString:@"*"]) {
+        result = (self.waitingOperand * newOperand);
         NSLog(@"Multiply!!!");
     }
     else if ([self.operation isEqualToString:@"/"]) {
+        result = (self.waitingOperand / newOperand);
         NSLog(@"Divide!!!");
     }
     else if ([self.operation isEqualToString:@"="]) {
+        result = (self.waitingOperand * newOperand);
         NSLog(@"Equals!!!");
     }
     return result;

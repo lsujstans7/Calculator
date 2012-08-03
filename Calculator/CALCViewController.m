@@ -66,7 +66,7 @@
         double currentNumber = [self.mainDisplayLabel.text doubleValue];
 
         if ([operator isEqualToString:@"="]) {
-            NSLog(@"currentNumber = %f", currentNumber);
+            NSLog(@"currentNumber = %f operand = %@ waitingOperand = %f", currentNumber, self.model.operation, self.model.waitingOperand);
             double result = [self.model performOperationWithOperand:(currentNumber)];
             NSLog(@"Result %f", result);
         }
@@ -74,6 +74,7 @@
                 
             self.model.waitingOperand = currentNumber;
             self.model.operation = operator;
+            NSLog(@"operator = %@ operation = %@", operator, [self.model operation]);
             
         }
         self.typingNumber = NO;
