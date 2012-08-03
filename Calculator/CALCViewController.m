@@ -23,6 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.typingNumber = NO;
+    self.model = [[CALCModel alloc] init];
 }
 
 - (void)viewDidUnload
@@ -64,6 +65,7 @@
     if (self.typingNumber) {
         
         double currentNumber = [self.mainDisplayLabel.text doubleValue];
+        NSLog(@"currentNumber = %f",currentNumber);
 
         if ([operator isEqualToString:@"="]) {
             NSLog(@"currentNumber = %f operand = %@ waitingOperand = %f", currentNumber, self.model.operation, self.model.waitingOperand);
