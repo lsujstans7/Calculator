@@ -23,6 +23,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.typingNumber = NO;
+    self.model = [[CALCModel alloc]init];
 }
 
 - (void)viewDidUnload
