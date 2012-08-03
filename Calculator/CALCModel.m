@@ -14,10 +14,13 @@
 
 - (double)performOperationWithOperand:(double)newOperand
 {
-    double result;
+    double result = 0.0;
+    
+    NSLog(@"Operation:%@ waitingOperand:%f", self.operation, self.waitingOperand);
     
     if ([self.operation isEqualToString:@"+"]) {
-        NSLog(@"Add!!!");
+        NSLog(@"Waiting operand is %f and new operand is %f", self.waitingOperand, newOperand);
+        result = (self.waitingOperand + newOperand);
     }
     else if ([self.operation isEqualToString:@"-"]) {
         NSLog(@"Subtract!!!");
@@ -31,8 +34,7 @@
     else if ([self.operation isEqualToString:@"="]) {
         NSLog(@"Equals!!!");
     }
-    
-    return 0.0;
+    return result;
 }
 
 @end

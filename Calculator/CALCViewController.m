@@ -44,9 +44,12 @@
 
 - (IBAction)numberButtonPushed:(UIButton *)sender {
     NSString *newDisplay;
-    if ([mainDisplayLabel.text isEqualToString:@"0"]) {
+    if (self.typingNumber == NO) {
         mainDisplayLabel.text = sender.titleLabel.text;
         newDisplay = sender.titleLabel.text;
+        if (![newDisplay isEqualToString:@"0"]) {
+            self.typingNumber = YES;
+        }
     }
     else {
         newDisplay = [self.mainDisplayLabel.text stringByAppendingFormat:@"%@", sender.titleLabel.text];
@@ -57,11 +60,13 @@
 
 - (IBAction)operatorButtonPushed:(UIButton *)sender {
     NSString *operator = sender.titleLabel.text;
+
     if (self.typingNumber) {
         
         double currentNumber = [self.mainDisplayLabel.text doubleValue];
 
         if ([operator isEqualToString:@"="]) {
+            NSLog(@"currentNumber = %f", currentNumber);
             double result = [self.model performOperationWithOperand:(currentNumber)];
             NSLog(@"Result %f", result);
         }
@@ -69,9 +74,8 @@
                 
             self.model.waitingOperand = currentNumber;
             self.model.operation = operator;
-        
+            
         }
-        mainDisplayLabel.text = @"0";
         self.typingNumber = NO;
     }
 //    if ([operator isEqualToString:@"+"]) {
